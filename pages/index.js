@@ -24,7 +24,7 @@ export default function Home() {
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify(body)
       })
-      await Router.push('/fund')
+      await Router.push('https://namuwongo-basketball-registration-pt20b574y-namblazers.vercel.app/fund')
     }catch(error){
       console.log(error)
     }
