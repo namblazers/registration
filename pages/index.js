@@ -19,7 +19,7 @@ export default function Home() {
     e.preventDefault()
     try{
       const body = {username,contact,address,recommendation}
-      await fetch('http://localhost:3000/api/register',{
+      await fetch('https://namuwongo-basketball-registration-pt20b574y-namblazers.vercel.app/api/register',{
         method:'POST',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify(body)
