@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { useState, useEffect } from 'react'
+import { useState, useEffect} from 'react'
 import Router from 'next/router'
 import { data } from 'autoprefixer'
+
 
 
 
@@ -14,6 +15,8 @@ export default function Home() {
   const [contact, setContact] = useState('')
   const [address, setAddress] = useState('')
   const [recommendation, setRecom] = useState('')
+  
+
 
   const addMember = async e =>{
     e.preventDefault()
@@ -29,6 +32,7 @@ export default function Home() {
       console.log(error)
     }
   }
+  
 
   return (
     <div className={styles.container}>
@@ -126,6 +130,7 @@ export default function Home() {
                           placeholder="John Mutebi Maureen"
                           value={username}
                           onChange={(e) => setUsername(e.target.value)}
+                          required={true}
                         />
                       </div>
                       <div className="mb-4">
@@ -139,6 +144,7 @@ export default function Home() {
                           placeholder="0704164752"
                           value={contact}
                           onChange={(e) => setContact(e.target.value)}
+                          required={true}
                         />
                       </div>
                       <div className="mb-4">
@@ -152,6 +158,7 @@ export default function Home() {
                           placeholder="Kisugu Road, African Gospel Church"
                           value={address}
                           onChange={(e) => setAddress(e.target.value)}
+                          required={true}
                         />
                       </div>
                       <div className="mb-4">
